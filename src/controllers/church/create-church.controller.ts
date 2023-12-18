@@ -3,18 +3,12 @@ import {
   ConflictException,
   Controller,
   Post,
-  Req,
-  UnauthorizedException,
   UseGuards,
-  UsePipes,
 } from '@nestjs/common';
 import { z } from 'zod';
-import { JwtService } from '@nestjs/jwt';
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { AuthGuard } from '@nestjs/passport';
 import { JwtAuthGuard } from 'src/auth/jwt-guardian';
-import type { Request } from 'express';
 import { CurrentUser } from 'src/auth/current-user-decorator';
 import { UserPayload } from 'src/auth/jwt.strategy';
 
@@ -55,7 +49,5 @@ export class CreateChurchController {
         userId,
       },
     });
-
-    return { request: user };
   }
 }

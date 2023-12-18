@@ -31,5 +31,12 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "name": "Igreja Batista Catuaí"
+  "name": "Igreja Batista Vila Nova"
 }
+
+###
+
+# @name fetch_churchs
+GET {{baseUrl}}/churchs
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
