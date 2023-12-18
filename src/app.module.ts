@@ -4,6 +4,8 @@ import { PrismaService } from './prisma/prisma.service';
 import { CreateUserController } from './controllers/user/create-user.controller';
 import { envSchema } from './env';
 import { AuthModule } from './auth/auth.module';
+import { CreateChurchController } from './controllers/church/create-church.controller';
+import { AuthenticateController } from './controllers/auth/authenticate.controller';
 
 @Module({
   imports: [
@@ -13,7 +15,11 @@ import { AuthModule } from './auth/auth.module';
     }),
     AuthModule,
   ],
-  controllers: [CreateUserController],
+  controllers: [
+    CreateUserController,
+    CreateChurchController,
+    AuthenticateController,
+  ],
   providers: [PrismaService],
 })
 export class AppModule {}
