@@ -29,7 +29,10 @@ API da My Church - Um sistema moderno para gerenciamento de igrejas.
 - [x] Instalação do ORM Prisma
 - [x] Geração de hash da senha com o bcryptjs. 
 - [x] Instalação do Zod.
-- [ ] Validação global de erros do Zod.
+- [x] Validação global de erros do Zod.
+- [x] Configuração do ConfigModule 
+- [ ] Configuração do Nestjs/passport e JWT
+
 
 - Em desenvolvimento...💡
 
