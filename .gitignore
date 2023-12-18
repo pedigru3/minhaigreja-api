@@ -37,3 +37,7 @@ lerna-debug.log*
 #DOCKER
 data
 .env
+
+#JWT
+my_private_key.pem
+my_public_key.pem
