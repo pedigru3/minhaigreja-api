@@ -42,6 +42,5 @@ export class CreateUserController {
         password: hashPassword,
       },
     });
-    console.log(body);
   }
 }

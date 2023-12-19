@@ -24,14 +24,18 @@ export class FetchChurchsController {
   async handle(@Query('page', queryValidationPipe) page: PageQueryParamSchema) {
     const perPage = 5;
 
-    const church = await this.prisma.church.findMany({
+    const churchs = await this.prisma.church.findMany({
       take: perPage,
       skip: (page - 1) * perPage,
       orderBy: {
         createdAt: 'desc',
       },
+      select: {
+        id: true,
+        name: true,
+      },
     });
 
-    return { church };
+    return { churchs };
   }
 }
