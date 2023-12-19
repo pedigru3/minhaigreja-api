@@ -8,8 +8,7 @@ API da My Church - Um sistema moderno para gerenciamento de igrejas.
 - **ORM:** Prisma
 - **Validação e Transformação de dados:** Zod
 - **Banco de dados:** PostgreSQL
-- **Testes:** Jest
-- **Outros** Bcrypt
+- **Testes:** Vitest
 
 ## ⚙️ Funcionalidades
 
@@ -31,8 +30,12 @@ API da My Church - Um sistema moderno para gerenciamento de igrejas.
 - [x] Instalação do Zod.
 - [x] Validação global de erros do Zod.
 - [x] Configuração do ConfigModule 
-- [ ] Configuração do Nestjs/passport e JWT
-
+- [x] Configuração do Nestjs/passport e JWT
+- [x] Criação de Rota users, authenticate e churchs 
+- [x] Instalação do Vitest
+- [x] Configuração de testes e2e (Banco de dados Isolados)
+- [ ] Testes e2e de usuários
+- [ ] Testes e2e de cadastro de nova igreja
 
 - Em desenvolvimento...💡
 
