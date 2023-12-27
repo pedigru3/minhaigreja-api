@@ -12,6 +12,30 @@ interface ChurchProps {
 }
 
 export class Church extends Entity<ChurchProps> {
+  get name() {
+    return this.props.name;
+  }
+
+  get adress() {
+    return this.props.addres.fullAdress;
+  }
+
+  get foundationDate() {
+    return this.props.foundationDate;
+  }
+
+  get baseVerse() {
+    return this.props.baseVerse;
+  }
+
+  get mission() {
+    return this.props.mission;
+  }
+
+  get managerID() {
+    return this.props.managerID;
+  }
+
   static create(props: ChurchProps, id?: UniqueEntityID) {
     const church = new Church(props, id);
 

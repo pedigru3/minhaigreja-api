@@ -7,10 +7,13 @@ interface RegisterChurchUseCaseRequest {
   managerId: string;
   name: string;
   city: string;
-  postalCode: string;
   state: string;
   street: string;
+  cep: string;
+  streetNumber: string;
+  neighborhood: string;
   foundationDate: string;
+  complement?: string;
 }
 
 export class RegisterChurchUseCase {
@@ -20,19 +23,25 @@ export class RegisterChurchUseCase {
     managerId,
     name,
     city,
-    postalCode,
     state,
     street,
     foundationDate,
+    cep,
+    neighborhood,
+    streetNumber,
+    complement,
   }: RegisterChurchUseCaseRequest) {
     const church = Church.create({
       foundationDate: new Date(foundationDate),
       managerID: new UniqueEntityID(managerId),
       name,
       addres: Address.create({
+        cep,
         city,
-        postalCode,
+        neighborhood,
+        streetNumber,
         state,
+        complement,
         street,
       }),
     });

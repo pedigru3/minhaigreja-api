@@ -7,6 +7,14 @@ interface ManagerProps {
 }
 
 export class Manager extends Entity<ManagerProps> {
+  get name() {
+    return this.props.name;
+  }
+
+  get email() {
+    return this.props.email;
+  }
+
   static create(props: ManagerProps, id?: UniqueEntityID) {
     const manager = new Manager(props, id);
 
